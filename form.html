@@ -24,15 +24,116 @@
     <div class="bg-full">
         
         <div class="container">
-            <div class="row">
-                <div class="col-xs-12 col-md-8 col-md-offset-2">
-                    <ul class="nav nav-tabs">
-                        <li role="presentation" class="active"><a href="#">Coffee</a></li>
-                        <li role="presentation"><a href="#">Tea</a></li>
-                        <li role="presentation"><a href="#">Food</a></li>
-                    </ul>
-                </div>
-            </div>
+                <form>
+                    <div class="form-group">
+                      <label for="name">Name</label>
+                      <input type="text" class="form-control" id="name" placeholder="Henry Majoros" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="hmajoros@umich.edu">
+                    </div>
+                    <div class="form-group">
+                        <label for="date">Date of visit</label>
+                        <input type="date" class="form-control" id="date">
+                    </div>
+                    <div class="radio-inline">
+                        <label><input type="radio">Food</label>
+                    </div>
+                    <div class="radio-inline">
+                        <label><input type="radio">Drink</label>
+                    </div>
+                    
+                    <select class="form-control">
+                        <option>Select your drink</option>
+                        
+                        <optgroup label="HOT DRINKS">
+                            
+                           <option>espresso</option>
+                           <option>latte</option>
+                           <option>macchiato</option>
+                           <option>cappuccino</option>
+                           <option>cafe con miel</option>
+                           <option>americano</option>
+                           <option>mocha</option>
+                           <option>chai</option>
+                           <option>hot chocolate</option>
+                           
+                    <optgroup label="TEA">
+                        
+                        <option>white peony organic</option>
+                        <option>white jasmine peach organic</option>
+                        <option>green jasmine organic</option>
+                        <option>green moroccan mint</option>
+                        <option>green dragon well</option>
+                        <option>green himalayan jade</option>
+                        <option>oolong baa zhong</option>
+                        <option>oolong coconut</option>
+                        <option>oolong iron goddess of mercy</option>
+                        <option>oolong magnolia blossom</option>
+                        <option>oolong lightly baked qin xin</option>
+                        <option>black earl grey organic</option>
+                        <option>black english breakfast</option>
+                        <option>black vanilla</option>
+                        <option>herbal blend 333 organic</option>
+                        <option>herbal king crimson organic</option>
+                        <option>herbal chamomile</option>
+                        <option>herbal serene dream</option>
+                        <option>yerba mate</option>
+                        
+                           <optgroup label="COLD DRINKS">
+                               
+                               <option>iced coffee cold brew</option>
+                               <option>iced tea black classic</option>
+                               <option>iced tea green moroccan mint</option>
+                               <option>iced tea oolong plum</option>
+                               <option>iced tea jasmine peach</option>
+                               <option>iced tea ginger with fresh lemon</option>
+                               <option>soda italian</option>
+                               <option>soda french</option>
+                               <option>perrier</option>
+                               
+                                <optgroup label="FROZEN YOGURT">
+                               
+                               <option>Chocolate</option>
+                               <option>Vanilla</option>
+                               
+                               <optgroup label="SNACKS">
+                              
+                                <option>gluten free snacks</option>
+                                <option>breads</option>
+                                <option>brownies</option>
+                                <option>cake by the slice</option>
+                                <option>cookies</option>
+                                <option>macarons</option>
+                                <option>muffins</option>
+                              
+                                           
+                           
+
+                    </select>
+                    
+                    <select class="form-control">
+                        <option>Select your food</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                    
+                    
+                    
+                    
+                    
+                    <label for="review">Enter your review</label>
+                    <textarea class="form-control" id="review" rows="5"></textarea>
+                    
+                    <button type="reset" class="btn btn-primary pull-left">Reset</button>
+                    <button type="submit" class="btn btn-default pull-right">Submit</button>
+                    
+                </form>
+                
         </div>
         
     </div>
