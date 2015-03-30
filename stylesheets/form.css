@@ -1,6 +1,61 @@
+* {
+    font-family: Roboto;
+}
+
 .bg-full {
     width: 100%;
-    background: url('../images/formBG.jpg') no-repeat;
+    background: url('../images/formbgdark.jpg') no-repeat;
     background-size: cover;
     background-position: center;
+}
+
+.top-buffer {
+    margin-top: 20px;
+}
+
+.form-group > label, .radio-inline > label, label {
+    color: white;
+    font-weight: 400;
+}
+
+.form-group > input, select, textarea {
+    margin-bottom: 20px;
+}
+
+select {
+    margin-top: 20px;
+}
+
+.form-group > input {
+    background: none !important;
+    border: none;
+    border-bottom: 3px solid white;
+    border-radius: 0;
+    box-shadow: none;
+    color: white;
+}
+
+.form-group > input:focus {
+    box-shadow: none;
+}
+
+.form-group > input::-webkit-input-placeholder {
+    color: #999;
+}
+
+select:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+textarea.form-control {
+    background: none !important;
+    box-shadow: none;
+    color: white;
+    font-weight: 400;
+    border-radius: 0;
+}
+
+textarea.form-control:focus {
+    box-shadow: none !important;
 }

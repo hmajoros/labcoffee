@@ -10,6 +10,7 @@
     <link href="stylesheets/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
+    <link href='http://fonts.googleapis.com/css?family=Roboto:200,400,700' rel='stylesheet' type='text/css'>
     <link href="stylesheets/form.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -24,116 +25,107 @@
     <div class="bg-full">
         
         <div class="container">
-                <form>
-                    <div class="form-group">
-                      <label for="name">Name</label>
-                      <input type="text" class="form-control" id="name" placeholder="Henry Majoros" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" class="form-control" id="email" placeholder="hmajoros@umich.edu">
-                    </div>
-                    <div class="form-group">
-                        <label for="date">Date of visit</label>
-                        <input type="date" class="form-control" id="date">
-                    </div>
-                    <div class="radio-inline">
-                        <label><input type="radio">Food</label>
-                    </div>
-                    <div class="radio-inline">
-                        <label><input type="radio">Drink</label>
-                    </div>
-                    
-                    <select class="form-control">
-                        <option>Select your drink</option>
-                        
-                        <optgroup label="HOT DRINKS">
-                            
-                           <option>espresso</option>
-                           <option>latte</option>
-                           <option>macchiato</option>
-                           <option>cappuccino</option>
-                           <option>cafe con miel</option>
-                           <option>americano</option>
-                           <option>mocha</option>
-                           <option>chai</option>
-                           <option>hot chocolate</option>
-                           
-                    <optgroup label="TEA">
-                        
-                        <option>white peony organic</option>
-                        <option>white jasmine peach organic</option>
-                        <option>green jasmine organic</option>
-                        <option>green moroccan mint</option>
-                        <option>green dragon well</option>
-                        <option>green himalayan jade</option>
-                        <option>oolong baa zhong</option>
-                        <option>oolong coconut</option>
-                        <option>oolong iron goddess of mercy</option>
-                        <option>oolong magnolia blossom</option>
-                        <option>oolong lightly baked qin xin</option>
-                        <option>black earl grey organic</option>
-                        <option>black english breakfast</option>
-                        <option>black vanilla</option>
-                        <option>herbal blend 333 organic</option>
-                        <option>herbal king crimson organic</option>
-                        <option>herbal chamomile</option>
-                        <option>herbal serene dream</option>
-                        <option>yerba mate</option>
-                        
-                           <optgroup label="COLD DRINKS">
-                               
-                               <option>iced coffee cold brew</option>
-                               <option>iced tea black classic</option>
-                               <option>iced tea green moroccan mint</option>
-                               <option>iced tea oolong plum</option>
-                               <option>iced tea jasmine peach</option>
-                               <option>iced tea ginger with fresh lemon</option>
-                               <option>soda italian</option>
-                               <option>soda french</option>
-                               <option>perrier</option>
-                               
-                                <optgroup label="FROZEN YOGURT">
-                               
-                               <option>Chocolate</option>
-                               <option>Vanilla</option>
-                               
-                               <optgroup label="SNACKS">
-                              
-                                <option>gluten free snacks</option>
-                                <option>breads</option>
-                                <option>brownies</option>
-                                <option>cake by the slice</option>
-                                <option>cookies</option>
-                                <option>macarons</option>
-                                <option>muffins</option>
-                              
-                                           
-                           
-
-                    </select>
-                    
-                    <select class="form-control">
-                        <option>Select your food</option>
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                    </select>
-                    
-                    
-                    
-                    
-                    
-                    <label for="review">Enter your review</label>
-                    <textarea class="form-control" id="review" rows="5"></textarea>
-                    
-                    <button type="reset" class="btn btn-primary pull-left">Reset</button>
-                    <button type="submit" class="btn btn-default pull-right">Submit</button>
-                    
-                </form>
+          <div class="row">
+            <form class="col-xs-12 col-md-6 col-md-offset-3" method="POST" action="review.php">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name" name="name" autocomplete="off" placeholder="Henry Majoros" required>
+              </div>
+              <div class="form-group">
+                  <label for="email">Email</label>
+                  <input type="email" class="form-control" id="email" name="email" autocomplete="off" placeholder="hmajoros@umich.edu">
+              </div>
+              <div class="form-group">
+                  <label for="date">Date of visit</label>
+                  <input type="date" class="form-control" name="date" id="date">
+              </div>
+              <div class="radio-inline">
+                  <label><input type="radio" name="orderType" data-select="food">Food</label>
+              </div>
+              <div class="radio-inline">
+                  <label><input type="radio" name="orderType" data-select="drink">Drink</label>
+              </div>
+              
+              <select class="form-control hide" id="drink" name="drink-select">
+                <option value="default">Select your drink</option>
                 
+                <optgroup label="HOT DRINKS">
+                    
+                <option value="1">espresso</option>
+                <option value="2">latte</option>
+                <option value="3">macchiato</option>
+                <option value="4">cappuccino</option>
+                <option value="5">cafe con miel</option>
+                <option value="6">americano</option>
+                <option value="7">mocha</option>
+                <option value="8">chai</option>
+                <option value="9">hot chocolate</option>
+                   
+                <optgroup label="TEA">
+                
+                <option value="10">white peony organic</option>
+                <option value="11">white jasmine peach organic</option>
+                <option value="12">green jasmine organic</option>
+                <option value="13">green moroccan mint</option>
+                <option value="14">green dragon well</option>
+                <option value="15">green himalayan jade</option>
+                <option value="16">oolong baa zhong</option>
+                <option value="17">oolong coconut</option>
+                <option value="18">oolong iron goddess of mercy</option>
+                <option value="19">oolong magnolia blossom</option>
+                <option value="20">oolong lightly baked qin xin</option>
+                <option value="21">black earl grey organic</option>
+                <option value="22">black english breakfast</option>
+                <option value="23">black vanilla</option>
+                <option value="24">herbal blend 333 organic</option>
+                <option value="25">herbal king crimson organic</option>
+                <option value="26">herbal chamomile</option>
+                <option value="27">herbal serene dream</option>
+                <option value="28">yerba mate</option>
+                
+                <optgroup label="COLD DRINKS">
+                       
+                <option value="29">iced coffee cold brew</option>
+                <option value="30">iced tea black classic</option>
+                <option value="31">iced tea green moroccan mint</option>
+                <option value="32">iced tea oolong plum</option>
+                <option value="33">iced tea jasmine peach</option>
+                <option value="34">iced tea ginger with fresh lemon</option>
+                <option value="35">soda italian</option>
+                <option value="36">soda french</option>
+                <option value="37">perrier</option>
+
+              </select>
+              
+              <select class="form-control hide" id="food" name="food-select">
+                <option value="default">Select your food</option>
+                
+                <optgroup label="FROZEN YOGURT">
+                       
+                <option value="1">Chocolate</option>
+                <option value="2">Vanilla</option>
+                
+                <optgroup label="SNACKS">
+                      
+                <option value="3">gluten free snacks</option>
+                <option value="4">breads</option>
+                <option value="5">brownies</option>
+                <option value="6">cake by the slice</option>
+                <option value="7">cookies</option>
+                <option value="8">macarons</option>
+                <option value="9">muffins</option>
+              </select>
+              
+              <div class="top-buffer"></div>
+
+              <label for="review">Enter your review</label>
+              <textarea class="form-control" id="review" name="review" rows="5"></textarea>
+              
+              <button type="reset" class="btn btn-danger pull-left">Reset</button>
+              <button type="submit" name="submit" value="submit" class="btn btn-primary pull-right">Submit</button>
+                
+            </form>
+          </div>
         </div>
         
     </div>
