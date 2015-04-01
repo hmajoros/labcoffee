@@ -7,13 +7,37 @@
     <title>LAB coffee</title>
     <script type="text/javascript">
       function matchEmails(){
-        var em1 = document.getElementById("em")
-        var em2 = document.getElementById("em2")
-        if (em1.value != em2.value){
+        var em1 = document.getElementById("em");
+        var em2 = document.getElementById("em2");
+        if (em1.value != em2.value) {
           alert("Your emails do not match. Please check them again.");
           return false;
-       }
+        }
       }
+       
+      function checkDate() {
+        var idate = document.getElementById("date"),
+            dateReg = /(0[1-9]|1[012])[\/](0[1-9]|[12][0-9]|3[01])[\/]201[4-9]|20[2-9][0-9]/;
+  
+        if(dateReg.test(idate.value)){
+          if(isFutureDate(idate.value)){
+            alert("Future date!");
+          } else {
+            // valid date
+          }
+        } else {
+            alert("Invalid Date!");
+        }
+      }
+    
+    function isFutureDate(idate) {
+        var today = new Date().getTime(),
+            idate = idate.split("/");
+
+        idate = new Date(idate[2], idate[1] - 1, idate[0]).getTime();
+        return (today - idate) < 0 ? true : false;
+    }
+    
     </script>
 
     <!-- Bootstrap core CSS -->
@@ -51,7 +75,7 @@
               </div>
               <div class="form-group">
                   <label for="date">Date of visit</label>
-                  <input type="date" class="form-control" name="date" id="date" value="<?php echo date('Y-m-d'); ?>">
+                  <input type="date" class="form-control" name="date" id="date" onblur="checkDate();" value="<?php echo date('Y-m-d'); ?>">
               </div>
               <div class="radio-inline">
                   <label><input type="radio" name="orderType" data-select="food">Food</label>
