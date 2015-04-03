@@ -13,6 +13,10 @@
     margin-top: 20px;
 }
 
+.form-control:focus {
+    border-color: #337ab7;
+}
+
 .form-group > label, .radio-inline > label, label {
     color: white;
     font-weight: 400;
@@ -54,6 +58,7 @@ textarea.form-control {
     color: white;
     font-weight: 400;
     border-radius: 0;
+    border: 3px solid white;
 }
 
 textarea.form-control:focus {

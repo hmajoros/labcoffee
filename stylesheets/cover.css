@@ -2,6 +2,17 @@
  * Globals
  */
 
+/* Fonts */
+@font-face {
+  font-family: Oswald-DemiBold;
+  src: url("../fonts/Oswald-DemiBold.ttf");
+}
+
+@font-face {
+  font-family: Oswald-LightItalic;
+  src: url("../fonts/Oswald-Extra-LightItalic.ttf");
+}
+
 /* Links */
 a,
 a:focus,
@@ -76,11 +87,16 @@ body {
 .masthead-nav > li > a {
   padding-right: 0;
   padding-left: 0;
-  font-size: 16px;
-  font-weight: bold;
+  font-size: 24px;
+  font-family: Oswald-DemiBold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
   color: #fff; /* IE8 proofing */
   color: rgba(255,255,255,.75);
-  border-bottom: 2px solid transparent;
+  border-bottom: 3px solid transparent;
+}
+.masthead-nav > li.pull-right {
+  float: none !important;
 }
 .masthead-nav > li > a:hover,
 .masthead-nav > li > a:focus {
@@ -95,16 +111,6 @@ body {
   border-bottom-color: #fff;
 }
 
-@media (min-width: 768px) {
-  .masthead-brand {
-    float: left;
-  }
-  .masthead-nav {
-    float: right;
-  }
-}
-
-
 /*
  * Cover
  */
@@ -115,6 +121,18 @@ body {
 .cover .btn-lg {
   padding: 10px 20px;
   font-weight: bold;
+}
+.cover-heading {
+  font-family: Oswald-DemiBold;
+  font-size: 192px;
+}
+.cover > .lead {
+  font-family: Oswald-LightItalic;
+  font-size: 24px;
+  margin-top: -30px;
+}
+.cover > .lead > .word-spacer {
+  margin-left: 32px;
 }
 
 
@@ -137,7 +155,12 @@ body {
   .masthead {
     position: fixed;
     top: 0;
+    text-align: left;
   }
+  .masthead-nav > li.pull-right {
+    float: right !important;
+  }
+
   .mastfoot {
     position: fixed;
     bottom: 0;
@@ -152,11 +175,12 @@ body {
   .cover-container {
     width: 100%; /* Must be percentage or pixels for horizontal alignment */
   }
+  .cover > .lead {
+    margin-bottom: 100px;
+  }
 }
 
 @media (min-width: 992px) {
-  .masthead,
-  .mastfoot,
   .cover-container {
     width: 700px;
   }
