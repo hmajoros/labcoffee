@@ -5,6 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>LAB coffee</title>
+    <script type="text/javascript">
+      function matchEmails(){
+        var em1 = document.getElementById("em");
+        var em2 = document.getElementById("em2");
+        if (em1.value != em2.value) {
+          alert("Your emails do not match. Please check them again.");
+          return false;
+        }
+      }
+       
+      function checkDate() {
+        var idate = document.getElementById("date"),
+            dateReg = /(0[1-9]|1[012])[\/](0[1-9]|[12][0-9]|3[01])[\/]201[4-9]|20[2-9][0-9]/;
+  
+        if(dateReg.test(idate.value)){
+          if(isFutureDate(idate.value)){
+            alert("Future date!");
+          } else {
+            // valid date
+          }
+        } else {
+            alert("Invalid Date!");
+        }
+      }
+    
+    function isFutureDate(idate) {
+        var today = new Date().getTime(),
+            idate = idate.split("/");
+
+        idate = new Date(idate[2], idate[1] - 1, idate[0]).getTime();
+        return (today - idate) < 0 ? true : false;
+    }
+    
+    </script>
 
     <!-- Bootstrap core CSS -->
     <link href="stylesheets/bootstrap.min.css" rel="stylesheet">
@@ -26,17 +60,21 @@
         
         <div class="container">
           <div class="row">
-            <form class="col-xs-12 col-md-6 col-md-offset-3" method="POST" action="review.php">
+            <form class="col-xs-12 col-md-6 col-md-offset-3" method="POST" action="responses.php" onsubmit="return matchEmails()">
               <div class="form-group">
                 <label for="name">Name</label>
-                <input type="text" class="form-control" id="name" name="name" autocomplete="off" placeholder="Henry Majoros" required>
+                <input type="text" class="form-control" id="name" name="name" autocomplete="off" placeholder="Input Name" required>
               </div>
               <div class="form-group">
                   <label for="email">Email</label>
-                  <input type="email" class="form-control" id="email" name="email" autocomplete="off" placeholder="hmajoros@umich.edu">
+                  <input type="email" class="form-control" id="em" name="email" autocomplete="off" placeholder="Input Email">
               </div>
               <div class="form-group">
-                  <label for="email-conf">Confirm Email</label>
+                <label for="email2">Confirm Email</label>
+                <input type="email" class="form-control" id="em2" autocomplete="off" placeholder="Confirm Email">
+              </div>
+              <div class="form-group">
+                <label for="email-conf">Confirm Email</label>
                   <input type="email" class="form-control" id="email-conf" name="email-conf" autocomplete="off" placeholder="hmajoros@umich.edu">
               </div>
               <div class="row">
@@ -136,7 +174,7 @@
               <textarea class="form-control" id="review" name="review" rows="5"></textarea>
               
               <button type="reset" class="btn btn-danger pull-left">Reset</button>
-              <button type="submit" name="submit" value="submit" class="btn btn-primary pull-right">Submit</button>
+              <button type="submit" name="submit" value="submit" class="btn btn-primary pull-right" onclick="return confirm('Are you sure you would like to submit?')">Submit</button>
                 
             </form>
           </div>
