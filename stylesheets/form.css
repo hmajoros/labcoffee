@@ -1,19 +1,28 @@
-* {
-    font-family: Roboto;
-}
-
+/*font-family{*/
+/*    font-family: Oswald-DemiBold;*/
+/*    src: url("../fonts/Oswald-DemiBold.ttf");*/
+/*}*/
 .bg-full {
     width: 100%;
     background: url('../images/formbgdark.jpg') no-repeat;
     background-size: cover;
-    background-position: center;
+    background-position: fixed;
     overflow: scroll;
-    padding-top: 32px;
     padding-bottom: 48px;
 }
 
+/*.return > a > span {*/
+/*    position: fixed;*/
+/*    top: 16px;*/
+/*    left: 50%;*/
+/*    font-size: 24px;*/
+/*    color: white;*/
+/*    text-decoration: none;*/
+/*    transform: translateX(-50%);*/
+}
+
 .top-buffer {
-    margin-top: 20px;
+    margin-top: 0px;
 }
 
 .form-control:focus {
@@ -70,8 +79,24 @@ textarea.form-control:focus {
 }
 
 @media (min-width: 768px) {
+    /*.return > a > span {*/
+    /*    left: 16px;*/
+    /*    transform: translateX(0);*/
+    /*}*/
+    
+.form-group > label, .radio-inline > label, label {
+    color: white;
+    font-weight: 400;
+    padding-top: 100px;
+   
+}
 
-    .bg-full {
-        padding: 48px;
-    }
+/*.nav masthead-nav{*/
+/*    position:fixed;*/
+    
+/*}*/
+    
+    
+    
+    
 }

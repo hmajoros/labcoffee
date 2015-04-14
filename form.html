@@ -7,8 +7,8 @@
     <title>LAB coffee</title>
     <script type="text/javascript">
       function matchEmails(){
-        var em1 = document.getElementById("em");
-        var em2 = document.getElementById("em2");
+        var em1 = document.getElementById("email");
+        var em2 = document.getElementById("email-conf");
         if (em1.value != em2.value) {
           alert("Your emails do not match. Please check them again.");
           return false;
@@ -44,8 +44,12 @@
     <link href="stylesheets/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href='http://fonts.googleapis.com/css?family=Roboto:200,400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Oswald:300,400,700' rel='stylesheet' type='text/css'>
+    <link href="stylesheets/cover.css" rel="stylesheet">
+    <link href="stylesheets/home.css" rel="stylesheet">
     <link href="stylesheets/form.css" rel="stylesheet">
+    <!--<link href="stylesheets/cover.css" rel="stylesheet">-->
+    <!--<link href="stylesheets/home.css" rel="stylesheet">-->
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -57,25 +61,45 @@
   <body>
 
     <div class="bg-full">
-        
+    
+    <div class="site-wrapper">
+
+      <div class="site-wrapper-inner">
+
+        <div class="masthead clearfix">
+          <div class="inner">
+            <nav>
+              <ul class="nav masthead-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="location.html">Location</a></li>
+                <li class="pull-right"><a href="menu.html">Menu</a></li>
+                <li class="pull-right"><a href="form.html">Review</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+  
         <div class="container">
           <div class="row">
             <form class="col-xs-12 col-md-6 col-md-offset-3" method="POST" action="responses.php" onsubmit="return matchEmails()">
               <div class="form-group">
                 <label for="name">Name</label>
-                <input type="text" class="form-control" id="name" name="name" autocomplete="off" placeholder="Input Name" required>
+                <input type="text" class="form-control" id="name" name="name" autocomplete="off" placeholder="Joe Smith" required>
               </div>
-              <div class="form-group">
-                  <label for="email">Email</label>
-                  <input type="email" class="form-control" id="em" name="email" autocomplete="off" placeholder="Input Email">
-              </div>
-              <div class="form-group">
-                <label for="email2">Confirm Email</label>
-                <input type="email" class="form-control" id="em2" autocomplete="off" placeholder="Confirm Email">
-              </div>
-              <div class="form-group">
-                <label for="email-conf">Confirm Email</label>
-                  <input type="email" class="form-control" id="email-conf" name="email-conf" autocomplete="off" placeholder="hmajoros@umich.edu">
+              <div class="row">
+                <div class="col-xs-12 col-md-6">
+                  <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" name="email" autocomplete="off" placeholder="coffeelover@example.com">
+                  </div>
+                </div>
+                <div class="col-xs-12 col-md-6">
+                  <div class="form-group">
+                    <label for="email-conf">Confirm Email</label>
+                    <input type="email" class="form-control" id="email-conf" name="email-conf" autocomplete="off" placeholder="coffeelover@example.com">
+                  </div>
+                </div>
               </div>
               <div class="row">
                 <div class="col-xs-6">
@@ -103,49 +127,49 @@
                 
                 <optgroup label="HOT DRINKS">
                     
-                <option value="1">espresso</option>
-                <option value="2">latte</option>
-                <option value="3">macchiato</option>
-                <option value="4">cappuccino</option>
-                <option value="5">cafe con miel</option>
-                <option value="6">americano</option>
-                <option value="7">mocha</option>
-                <option value="8">chai</option>
-                <option value="9">hot chocolate</option>
+                <option value="espresso">espresso</option>
+                <option value="latte">latte</option>
+                <option value="macchiato">macchiato</option>
+                <option value="cappuccino">cappuccino</option>
+                <option value="cafe con miel">cafe con miel</option>
+                <option value="americano">americano</option>
+                <option value="mocha">mocha</option>
+                <option value="chai">chai</option>
+                <option value="hot chocolate">hot chocolate</option>
                    
                 <optgroup label="TEA">
                 
-                <option value="10">white peony organic</option>
-                <option value="11">white jasmine peach organic</option>
-                <option value="12">green jasmine organic</option>
-                <option value="13">green moroccan mint</option>
-                <option value="14">green dragon well</option>
-                <option value="15">green himalayan jade</option>
-                <option value="16">oolong baa zhong</option>
-                <option value="17">oolong coconut</option>
-                <option value="18">oolong iron goddess of mercy</option>
-                <option value="19">oolong magnolia blossom</option>
-                <option value="20">oolong lightly baked qin xin</option>
-                <option value="21">black earl grey organic</option>
-                <option value="22">black english breakfast</option>
-                <option value="23">black vanilla</option>
-                <option value="24">herbal blend 333 organic</option>
-                <option value="25">herbal king crimson organic</option>
-                <option value="26">herbal chamomile</option>
-                <option value="27">herbal serene dream</option>
-                <option value="28">yerba mate</option>
+                <option value="white peony organic">white peony organic</option>
+                <option value="white jasmine peach organic">white jasmine peach organic</option>
+                <option value="green jasmine organic">green jasmine organic</option>
+                <option value="green moroccan mint">green moroccan mint</option>
+                <option value="green dragon well">green dragon well</option>
+                <option value="green himalayan jade">green himalayan jade</option>
+                <option value="oolong baa zhong">oolong baa zhong</option>
+                <option value="oolong coconut">oolong coconut</option>
+                <option value="oolong iron goddess of mercy">oolong iron goddess of mercy</option>
+                <option value="oolong magnolia blossom">oolong magnolia blossom</option>
+                <option value="oolong lightly baked qin xin">oolong lightly baked qin xin</option>
+                <option value="black earl grey organic">black earl grey organic</option>
+                <option value="black english breakfast">black english breakfast</option>
+                <option value="black vanilla">black vanilla</option>
+                <option value="herbal blend 333 organic">herbal blend 333 organic</option>
+                <option value="herbal king crimson organic">herbal king crimson organic</option>
+                <option value="herbal chamomile">herbal chamomile</option>
+                <option value="herbal serene dream">herbal serene dream</option>
+                <option value="yerba mate">yerba mate</option>
                 
                 <optgroup label="COLD DRINKS">
                        
-                <option value="29">iced coffee cold brew</option>
-                <option value="30">iced tea black classic</option>
-                <option value="31">iced tea green moroccan mint</option>
-                <option value="32">iced tea oolong plum</option>
-                <option value="33">iced tea jasmine peach</option>
-                <option value="34">iced tea ginger with fresh lemon</option>
-                <option value="35">soda italian</option>
-                <option value="36">soda french</option>
-                <option value="37">perrier</option>
+                <option value="iced coffee cold brew">iced coffee cold brew</option>
+                <option value="iced tea black classic">iced tea black classic</option>
+                <option value="iced tea green moroccan mint">iced tea green moroccan mint</option>
+                <option value="iced tea oolong plum">iced tea oolong plum</option>
+                <option value="iced tea jasmine peach">iced tea jasmine peach</option>
+                <option value="iced tea ginger with fresh lemon">iced tea ginger with fresh lemon</option>
+                <option value="soda italian">soda italian</option>
+                <option value="soda french">soda french</option>
+                <option value="perrier">perrier</option>
 
               </select>
               
@@ -154,18 +178,18 @@
                 
                 <optgroup label="FROZEN YOGURT">
                        
-                <option value="1">Chocolate</option>
-                <option value="2">Vanilla</option>
+                <option value="chocolate">chocolate</option>
+                <option value="vanilla">vanilla</option>
                 
                 <optgroup label="SNACKS">
                       
-                <option value="3">gluten free snacks</option>
-                <option value="4">breads</option>
-                <option value="5">brownies</option>
-                <option value="6">cake by the slice</option>
-                <option value="7">cookies</option>
-                <option value="8">macarons</option>
-                <option value="9">muffins</option>
+                <option value="gluten free snacks">gluten free snacks</option>
+                <option value="breads">breads</option>
+                <option value="brownies">brownies</option>
+                <option value="cake by the slice">cake by the slice</option>
+                <option value="cookies">cookies</option>
+                <option value="macaroons">macaroons</option>
+                <option value="muffins">muffins</option>
               </select>
               
               <div class="top-buffer"></div>
@@ -180,6 +204,9 @@
           </div>
         </div>
         
+    </div>
+    </div>
+
     </div>
     <!-- Bootstrap core JavaScript
     ================================================== -->

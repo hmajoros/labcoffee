@@ -31,16 +31,20 @@
 
         <div class="masthead clearfix">
           <div class="inner">
-            <nav>
-              <ul class="nav masthead-nav">
-                <li class="active"><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="location.html">Location</a></li>
-                <li class="pull-right"><a href="menu.html">Menu</a></li>
-                <li class="pull-right"><a href="form.html">Review</a></li>
-              </ul>
-            </nav>
-          </div>
+          //   <?php
+			       //   $Name = basename(__FILE__);
+			       //   include ('labheader.php');
+		        // ?>
+          <!--  <nav>-->
+          <!--    <ul class="nav masthead-nav">-->
+          <!--      <li class="active"><a href="index.html">Home</a></li>-->
+          <!--      <li><a href="about.html">About</a></li>-->
+          <!--      <li><a href="location.html">Location</a></li>-->
+          <!--      <li class="pull-right"><a href="menu.html">Menu</a></li>-->
+          <!--      <li class="pull-right"><a href="form.html">Review</a></li>-->
+          <!--    </ul>-->
+          <!--  </nav>-->
+          <!--</div>-->
         </div>
 
         <div class="cover-container">
@@ -54,11 +58,15 @@
           </div>
         </div>
 
-        <div class="mastfoot">
-          <div class="inner">
-            <p>Redesigned by Henry Majoros, Logan Meyer, Kenny Heindel and Benjamin Segal</p>
-          </div>
-        </div>
+        <!--<div class="mastfoot">-->
+        <!--  <div class="inner">-->
+        <!--    <p>Redesigned by Henry Majoros, Logan Meyer, Kenny Heindel and Benjamin Segal</p>-->
+        <!--  </div>-->
+        <!--</div>-->
+
+      <?php
+			  include ('labfooter.php');
+		  ?>
 
       </div>
 
